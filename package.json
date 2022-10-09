@@ -7,7 +7,8 @@
     "build": "node ace build --production",
     "start": "node server.js",
     "lint": "eslint . --ext=.ts",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -41,10 +42,14 @@
     "@japa/preset-adonis": "^1.2.0",
     "@japa/runner": "^2.2.1",
     "adonis-preset-ts": "^2.1.0",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-adonis": "^2.1.1",
     "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "pino-pretty": "^9.1.1",
     "prettier": "^2.7.1",
     "typescript": "~4.6",
@@ -52,6 +57,7 @@
     "youch-terminal": "^2.1.5"
   },
   "dependencies": {
+    "@adonisjs/auth": "^8.2.2",
     "@adonisjs/core": "^5.8.7",
     "@adonisjs/lucid": "^18.2.0",
     "@adonisjs/repl": "^3.1.11",
@@ -60,5 +66,10 @@
     "proxy-addr": "^2.0.7",
     "reflect-metadata": "^0.1.13",
     "source-map-support": "^0.5.21"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
