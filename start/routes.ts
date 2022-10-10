@@ -22,4 +22,9 @@ Route.group(() => {
   Route.get('/options', 'OptionsController.show')
   Route.get('/options/:id', 'OptionsController.showOne')
   Route.delete('/options/:id', 'OptionsController.destroy')
+
+  Route.post('/calls_serices', 'CallServicesController.store')
+  Route.get('/calls_serices', 'CallServicesController.show')
+  Route.get('/calls_serices/:id', 'CallServicesController.showOne')
+  Route.delete('/calls_serices/:id', 'CallServicesController.destroy')
 }).prefix('_api/v1/cookie')

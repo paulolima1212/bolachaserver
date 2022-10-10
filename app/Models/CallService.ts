@@ -2,11 +2,6 @@ import { DateTime } from 'luxon'
 import { BaseModel, beforeCreate, column } from '@ioc:Adonis/Lucid/Orm'
 import { randomUUID } from 'node:crypto'
 
-enum TypeService {
-  PAYCHECK = 'PAYCHECK',
-  HELP = 'HELP',
-}
-
 export default class CallService extends BaseModel {
   @column({ isPrimary: true })
   public id: string
@@ -18,7 +13,7 @@ export default class CallService extends BaseModel {
   public table: string
 
   @column()
-  public service: TypeService
+  public service: string
 
   @column({
     columnName: 'is_done',
