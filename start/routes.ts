@@ -32,4 +32,6 @@ Route.group(() => {
   Route.get('/categories', 'CategoriesController.show')
   Route.get('/categories/:id', 'CategoriesController.showOne')
   Route.delete('/categories/:id', 'CategoriesController.destroy')
+
+  Route.post('/stocks', 'StocksController.store')
 }).prefix('_api/v1/cookie')
