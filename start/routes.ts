@@ -4,4 +4,4 @@ Route.group(() => {
   Route.post('/users', 'UsersController.store')
   Route.post('/users/sessions', 'SessionsController.store')
   Route.delete('/users/sessions', 'SessionsController.destroy').middleware('auth')
-}).prefix('_api/v1/bolacha')
+}).prefix('_api/v1/cookie')
