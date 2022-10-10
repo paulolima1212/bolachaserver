@@ -28,11 +28,11 @@ export default class Order extends BaseModel {
   @column({ columnName: 'status_payment' })
   public statusPayment: boolean
 
-  @column({ columnName: 'order_id' })
-  public orderId: string
+  @column({ columnName: 'product_id' })
+  public productId: string
 
   @hasMany(() => Product, {
-    localKey: 'orderId',
+    localKey: 'productId',
     foreignKey: 'id',
   })
   public product: HasMany<typeof Product>
