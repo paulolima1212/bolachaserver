@@ -5,7 +5,11 @@ Route.group(() => {
   Route.post('/users/sessions', 'SessionsController.store')
   Route.delete('/users/sessions', 'SessionsController.destroy').middleware('auth')
 
-  Route.post('/categoires/options', 'CategoriesOptionsController.store')
+  Route.post('/categories/options', 'CategoriesOptionsController.store')
+  Route.post('/extras/categories', 'ExtrasCategoriesController.store')
 
-  // Route.post('')
+  Route.post('/products', 'ProductsController.store').middleware('auth')
+  Route.get('/products', 'ProductsController.show')
+  Route.get('/products/:id', 'ProductsController.showOne')
+  Route.delete('/products/:id', 'ProductsController.destroy').middleware('auth')
 }).prefix('_api/v1/cookie')
