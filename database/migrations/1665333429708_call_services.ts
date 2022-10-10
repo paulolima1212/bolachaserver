@@ -10,7 +10,7 @@ export default class extends BaseSchema {
       table.string('client').notNullable()
       table.string('table').notNullable()
       table
-        .enum('service', ['PAYCHECK', 'HELP'], { enumName: 'TypeService', useNative: true })
+        .enum('service', ['PAYCHECK', 'HELP'], { enumName: 'service', useNative: true })
         .notNullable()
       table.boolean('is_done').defaultTo(false)
 

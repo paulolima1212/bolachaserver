@@ -14,7 +14,7 @@ export default class extends BaseSchema {
       table
         .enum('payment_method', ['MBWAY', 'DINHEIRO'], {
           useNative: true,
-          enumName: 'pay_method',
+          enumName: 'pay',
         })
         .defaultTo('DINHEIRO')
       table.boolean('status').defaultTo(false)

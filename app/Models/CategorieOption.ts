@@ -8,8 +8,8 @@ export default class CategorieOption extends BaseModel {
   @column({ isPrimary: true })
   public id: string
 
-  @column({ columnName: 'categorie_id' })
-  public categorieId: string
+  @column({ columnName: 'category_id' })
+  public categoryId: string
 
   @column({ columnName: 'option_id' })
   public optionId: string
@@ -18,7 +18,7 @@ export default class CategorieOption extends BaseModel {
     foreignKey: 'id',
     localKey: 'categorieId',
   })
-  public categorie: BelongsTo<typeof Category>
+  public category: BelongsTo<typeof Category>
 
   @belongsTo(() => Option, {
     foreignKey: 'id',

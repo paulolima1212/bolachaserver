@@ -7,7 +7,7 @@ export default class extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.string('id').primary()
 
-      table.string('categorie_id').notNullable()
+      table.string('category_id').notNullable()
       table.string('option_id').notNullable()
 
       table.timestamp('created_at', { useTz: true })
