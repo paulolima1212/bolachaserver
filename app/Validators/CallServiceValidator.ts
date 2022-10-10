@@ -23,7 +23,12 @@ export default class CallServiceValidator {
    *     ])
    *    ```
    */
-  public schema = schema.create({})
+  public schema = schema.create({
+    client: schema.string(),
+    table: schema.string(),
+    service: schema.enum(['PAYCHECK', 'HELP']),
+    isDone: schema.boolean(),
+  })
 
   /**
    * Custom messages for validation failures. You can make use of dot notation `(.)`
