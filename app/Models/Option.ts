@@ -10,9 +10,6 @@ export default class Option extends BaseModel {
   @column()
   public option: string
 
-  @column({ columnName: 'category_id' })
-  public categoryId: string
-
   @manyToMany(() => Category, {
     pivotTable: 'categorie_options',
   })
