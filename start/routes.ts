@@ -17,4 +17,9 @@ Route.group(() => {
   Route.get('/orders', 'OrdersController.show')
   Route.get('/orders/:id', 'OrdersController.showOne')
   Route.delete('/orders/:id', 'OrdersController.destroy')
+
+  Route.post('/options', 'OptionsController.store')
+  Route.get('/options', 'OptionsController.show')
+  Route.get('/options/:id', 'OptionsController.showOne')
+  Route.delete('/options/:id', 'OptionsController.destroy')
 }).prefix('_api/v1/cookie')
