@@ -16,12 +16,12 @@ Route.group(() => {
   Route.post('/orders', 'OrdersController.store')
   Route.get('/orders', 'OrdersController.show')
   Route.get('/orders/:id', 'OrdersController.showOne')
-  Route.delete('/orders/:id', 'OrdersController.destroy')
+  Route.delete('/orders/:id', 'OrdersController.destroy').middleware('auth')
 
   Route.post('/options', 'OptionsController.store')
   Route.get('/options', 'OptionsController.show')
   Route.get('/options/:id', 'OptionsController.showOne')
-  Route.delete('/options/:id', 'OptionsController.destroy')
+  Route.delete('/options/:id', 'OptionsController.destroy').middleware('auth')
 
   Route.post('/calls_serices', 'CallServicesController.store')
   Route.get('/calls_serices', 'CallServicesController.show')
@@ -31,7 +31,9 @@ Route.group(() => {
   Route.post('/categories', 'CategoriesController.store')
   Route.get('/categories', 'CategoriesController.show')
   Route.get('/categories/:id', 'CategoriesController.showOne')
-  Route.delete('/categories/:id', 'CategoriesController.destroy')
+  Route.delete('/categories/:id', 'CategoriesController.destroy').middleware('auth')
 
-  Route.post('/stocks', 'StocksController.store')
+  Route.post('/stocks', 'StocksController.store').middleware('auth')
+
+  Route.post('/extras', 'ExtrasController.store').middleware('auth')
 }).prefix('_api/v1/cookie')
