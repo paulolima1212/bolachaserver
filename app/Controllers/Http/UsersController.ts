@@ -13,6 +13,12 @@ export default class UsersController {
         username,
       })
 
+      console.log({
+        email,
+        password,
+        username,
+      })
+
       const token = await auth.use('api').attempt(email, password, {
         expiresIn: '2hours',
       })

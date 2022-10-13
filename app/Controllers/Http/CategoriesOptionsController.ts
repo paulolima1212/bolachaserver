@@ -3,11 +3,11 @@ import CategorieOption from 'App/Models/CategorieOption'
 
 export default class CategoriesOptionsController {
   public async store({ request, response }: HttpContextContract) {
-    const { categorieId, optionId } = request.only(['categorieId', 'optionId'])
+    const { categoryId, optionId } = request.only(['categoryId', 'optionId'])
 
     await CategorieOption.create({
-      categorieId,
       optionId,
+      categoryId,
     })
 
     return response.created({})
